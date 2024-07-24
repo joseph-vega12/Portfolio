@@ -18,8 +18,7 @@ const StyledHeroSection = styled.section`
     padding-top: var(--nav-height);
   }
 
-  h1,
-  .big-heading-typwritter {
+  h1 {
     margin: 0 0 30px 4px;
     color: var(--teal);
     font-family: var(--font-mono);
@@ -62,13 +61,14 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
+
   const two = (
     <Typewriter
       options={{
         strings: ['Joseph Vega', 'Software Engineer.'],
         autoStart: true,
         loop: true,
-        wrapperClassName: 'big-heading',
+        wrapperClassName: 'big-heading-span',
       }}
     />
   );

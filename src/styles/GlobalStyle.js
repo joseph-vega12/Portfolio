@@ -162,14 +162,15 @@ const GlobalStyle = createGlobalStyle`
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .big-heading-span {
     margin: 0 0 10px 0;
     font-weight: 600;
     color: var(--lightest-slate);
     line-height: 1.1;
   }
 
-  .big-heading {  
+  .big-heading, .big-heading-span {  
     margin: 0;    
     font-size: clamp(40px, 8vw, 80px);
   }

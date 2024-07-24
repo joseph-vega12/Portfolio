@@ -169,15 +169,11 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.1;
   }
 
-  .big-heading {
+  .big-heading {  
     margin: 0;    
     font-size: clamp(40px, 8vw, 80px);
   }
   
-  .underline {
-    border-bottom: 3px solid var(--teal);
-  }
-
   .medium-heading {
     margin: 0;
     font-size: clamp(40px, 8vw, 60px);

@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import Typewriter from 'typewriter-effect';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter}
@@ -17,7 +18,8 @@ const StyledHeroSection = styled.section`
     padding-top: var(--nav-height);
   }
 
-  h1 {
+  h1,
+  .big-heading-typwritter {
     margin: 0 0 30px 4px;
     color: var(--teal);
     font-family: var(--font-mono);
@@ -61,12 +63,16 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = (
-    <h2 className="big-heading">
-      <span className="underline">Jose</span>ph Vega.
-    </h2>
+    <Typewriter
+      options={{
+        strings: ['Joseph Vega', 'Software Engineer.'],
+        autoStart: true,
+        loop: true,
+        wrapperClassName: 'big-heading',
+      }}
+    />
   );
-  // const three = <h3 className="big-heading">I build things for the web.</h3>;
-  const four = (
+  const three = (
     <>
       <p>
         I’m a software engineer specializing in building (and occasionally designing) exceptional
@@ -75,7 +81,7 @@ const Hero = () => {
       </p>
     </>
   );
-  const five = (
+  const four = (
     <a
       className="email-link"
       href="https://www.newline.co/courses/build-a-spotify-connected-app"
@@ -85,7 +91,7 @@ const Hero = () => {
     </a>
   );
 
-  const items = [one, two, four, five];
+  const items = [one, two, three, four];
 
   return (
     <StyledHeroSection>
